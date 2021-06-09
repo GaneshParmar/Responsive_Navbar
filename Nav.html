@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div id="logo">Himmat Kitchen's</div>
+    <nav>
+        <div>
+            <a id="home" href="#">Home</a>
+        </div>
+        <div id="nav-2">
+            <span id="flex"><a href="#" id="menu" onclick="navDisplay()">Menu</a>
+                <button onclick="navDisplay()" id="sm-menu"> Menu</button>
+               <div id="menu-list"><ul onmouseover="myFunction()" onmouseout="hide()">
+                    <li><a href="https://www.zomato.com/mumbai/restaurants/pizza?category=1"  target="_blank">Pizza
+                        <img src="pizza.jpg">
+                    </a></li><hr>
+                    <li><a href="https://www.zomato.com/mumbai/restaurants/burger?category=1" target="_blank">Burger
+                        <img src="burger.jpg">
+                    </a></li><hr>
+                    <li><a href="https://www.zomato.com/mumbai/delivery?dishv2_id=184b3f811e4e3f2eb9d763cd33dffdf6_2" target="_blank">Coke
+                        <img src="coke.jpg">
+                    </a></li><hr>
+                    <li><a href="https://www.zomato.com/mumbai/delivery?dishv2_id=3767b450824877f2b8f284f7a5625440_2" target="_blank">Rice
+                        <img src="rice.jpg">
+                    </a></li><hr>
+                    <li><a href="https://www.zomato.com/mumbai/restaurants/tea?category=1" target="_blank">Tea
+                        <img src="tea.jpg">
+                    </a></li><hr>
+                    <li><a href="https://www.zomato.com/mumbai/restaurants/coffee?category=1" target="_blank">Coffee
+                        <img src="coffee.jpg">
+                    </a></li>
+                </ul> </div>
+            </span>
+            <a href="#">ContactUs</a>
+            <a href="#">AboutUS</a>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="navDisp()">
+                <i class="fa fa-bars" id="bar"></i>
+              </a>
+    </nav>
+    <script>
+        var flag=0;
+        function myFunction() {
+                document.getElementById("menu").style.color="black";
+                
+            
+        }
+        function hide() {
+            document.getElementById("menu").style.color="grey";
+        }
+        function navDisplay()
+        {
+            if(count==1){
+            document.getElementById("menu-list").style.display="block";
+            count=0;    
+        }
+            if(count==0){
+                document.getElementById("menu-list").style.display="none";
+                count=1;
+                 }
+
+
+        }
+        function navDisp(){
+            if(flag==0){
+            navbar = document.getElementById("nav-2");
+            navbar.style.display="block";
+            document.getElementById("bar").style.color="black";
+            flag=1;    
+        }
+            else{
+                navbar = document.getElementById("nav-2");
+                navbar.style.display="none";
+                document.getElementById("bar").style.color="rgba(0, 0, 0, 0.5)";
+                flag=0;
+            }
+
+        }
+
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
