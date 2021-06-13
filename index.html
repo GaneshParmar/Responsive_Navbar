@@ -17,7 +17,8 @@
         <div id="nav-2">
             <span id="flex"><a href="#" id="menu" onclick="navDisplay()">Menu</a>
                 <button onclick="navDisplay()" id="sm-menu"> Menu</button>
-               <div id="menu-list"><ul onmouseover="myFunction()" onmouseout="hide()">
+               <div id="menu-list">
+                   <ul onmouseover="myFunction()" onmouseout="hide()">
                     <li><a href="https://www.zomato.com/mumbai/restaurants/pizza?category=1"  target="_blank">Pizza
                         <img src="pizza.jpg">
                     </a></li><hr>
@@ -45,6 +46,11 @@
                 <i class="fa fa-bars" id="bar"></i>
               </a>
     </nav>
+    <div id="small-info">
+        <h1>Hey I am Ganesh I made this!</h1><br><br>
+    <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus beatae at fuga modi perspiciatis similique iste, distinctio perferendis eaque corporis! Hic nisi temporibus sapiente, odio nesciunt amet. Nostrum, eaque ipsum?Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae harum quaerat aperiam iure quam, dignissimos aliquid iusto obcaecati nulla hic, atque voluptatem aliquam odio earum omnis doloribus dolorem minima placeat.</P>
+    </div>
+    
     <script>
         var flag=0;
         function myFunction() {
@@ -73,11 +79,13 @@
             navbar = document.getElementById("nav-2");
             navbar.style.display="block";
             document.getElementById("bar").style.color="black";
+            navbar.style.left="0";
             flag=1;    
         }
             else{
                 navbar = document.getElementById("nav-2");
-                navbar.style.display="none";
+                // navbar.style.display="none";
+                navbar.style.left="-100%";
                 document.getElementById("bar").style.color="rgba(0, 0, 0, 0.5)";
                 flag=0;
             }
