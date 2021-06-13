@@ -254,10 +254,31 @@ hr{
         background-color: whitesmoke;
         width: 100%;
         position: absolute;
-        top: 143px;
+        top: 168px;
         left: -100%;
         transition: ease 0.5s;
         z-index: 1;
      }
+     #small-info
+     {
+         position: absolute;
+         left: 13%;
+         top: 35%;
+         display: block;
+         border: 1px solid black;
+         box-shadow: 1px 1px 10px grey;
+         /* justify-content: space-around; */
+         border-radius: 3px;
+         width: 70%;
+         height: 55%;
+         padding: 20px;
+     }
+     #small-info >h1{
+        font-size: 1.1em;
+    }  
+    #small-info >p
+    {
+        font-size: 0.5em;
+    }
     
 }
